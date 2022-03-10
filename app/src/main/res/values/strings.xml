@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LayoutProve</string>
+    <string name="entrez_rue">Entrez Rue...</string>
+    <string name="rechercher_une_adresse">Rechercher une adresse</string>
+</resources>

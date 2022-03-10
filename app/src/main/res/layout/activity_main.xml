@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:theme="@style/Theme.MaterialComponents.DayNight"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@color/deep_blue"
+        android:backgroundTint="@color/deep_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/RueSearch"
+        android:layout_width="374dp"
+        android:layout_height="100dp"
+        android:autofillHints="@string/entrez_rue"
+        android:background="@drawable/rounded_edit_text"
+        android:ems="10"
+
+        android:hint="@string/entrez_rue"
+        android:inputType="textAutoComplete"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.54" />
+
+    <TextView
+        android:id="@+id/testo"
+        android:layout_width="323dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/rechercher_une_adresse"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="@+id/RueSearch"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/RueSearch"
+        app:layout_constraintTop_toTopOf="@+id/RueSearch" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="529dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:itemCount="20"
+        tools:listitem="@layout/recycler_view_item" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="355dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="94dp"
+        android:fadingEdge="horizontal"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/fainter_red"
+        android:progressBackgroundTint="@color/fainter_red"
+        android:progressTint="@color/faint_red"
+        app:layout_constraintEnd_toEndOf="@+id/RueSearch"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="@+id/RueSearch"
+        app:layout_constraintTop_toTopOf="@+id/RueSearch" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
